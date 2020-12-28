@@ -1,0 +1,4 @@
+class Solution:
+    def numJewelsInStones(self, jewels: str, stones: str) -> int:
+        res = [stones.count(x) for x in jewels]
+        return sum(res)
