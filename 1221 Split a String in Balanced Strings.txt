@@ -1,0 +1,13 @@
+class Solution:
+    def balancedStringSplit(self, s: str) -> int:
+        Rc, Lc, c = 0, 0, 0
+        for i in s:
+            if i == 'L':
+                Lc += 1
+            elif i == 'R':
+                Rc += 1
+            if Lc == Rc:
+                c += 1
+                Lc, Rc = 0, 0
+                
+        return c
